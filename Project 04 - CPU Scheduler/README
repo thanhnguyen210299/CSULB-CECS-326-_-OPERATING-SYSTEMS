@@ -1,0 +1,25 @@
+CECS 326 - Project 4
+Name: Thanh Nguyen, Fiona Le
+CONTENTS OF THIS FILE
+---------------------------------------------
+* Introduction
+The folder contains schedule_fcfs.c, schedule_priority.c, schedule_rr.c are the
+code files, which implement process scheduling algorithms FCFS, priority, and
+round-robin respectively.
+* Installation
+Users need to install Ubuntu on Virtual Machine and know command syntax to run
+the code files. The command syntax for each part is provided in the “Requirements”
+part.
+* Run MAKEFILE
+1. Create makefile for schedule_fcfs.c : make fcfs
+2. Create makefile for schedule_priority.c: make priority
+3. Create makefile for schedule_rr.c: make rr
+* Requirements
+In order to run the code files on Ubuntu system, users need to run the right
+command syntax. The detailed information is given below.
+1. schedule_fcfs.c : ./fcfs schedule.txt
+2. schedule_priority.c: ./priority schedule.txt
+3. schedule_rr.c: ./rr schedule.txt
+Example: To run the code file for the FCFS file, user needs to do the following steps:
+1. make fcfs
+2. ./fcfs schedule.txt
