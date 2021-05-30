@@ -1,0 +1,56 @@
+CECS 326 - Project 1
+Name: Thanh Nguyen, Fiona Le
+
+CONTENTS OF THIS FILE
+---------------------------------------------
+
+ * Introduction
+
+The folder contains part01.c and part02.c. The part01.c is a code file that creates multiple threads performing unsynchronized access to shared data. The part02.c is the code file that uses Pthreads mutex to perform synchronization. 
+
+ * Requirements
+In order to run the code files on Ubuntu system, users need to run different command syntax for each part. The detailed information is given below.
+
+par01.c
+
+1.	gcc -pthread part01.c
+2.	./a.out number_of_threads
+or
+3.	gcc -pthread part01.c -o output_file
+4.	./output_file number_of_threads
+
+part02.c
+1.	gcc -pthread -Wall -D PTHREAD_SYNC part02.c
+2.	./a.output_file number_of_threads
+or
+3.	gcc -pthread -Wall -D PTHREAD_SYNC part02.c -o output_file
+4.	./output_file number_of_threads
+
+In these commands above, each part means:
+-	gcc is the compiler command
+-	-pthread tells the compiler to link in the pthread library as well as configure the compilation for threads
+-	part01.c and part02.c are the name of C program source files
+-	-o is option to make object file
+-	output_file, or a.out is the name of object file
+-	number_of_thread is the number of threads that the user wants to create, and it should be a valid positive number.
+-	-Wall Specifies how the compiler generates warnings for a given compilation
+-	-D defines a preprocessing symbol (the macro PTHREAD_SYNC) for a source file
+-	PTHREAD_SYNC is the macro definition, it needs to be called to run the synchronized version.
+
+ * Installation
+Users need to install Ubuntu on Virtual Machine and know command syntax to run the code files. The command syntax for each part is provided in the “Requirements” part.
+
+* Run MAKEFILE
+
+Run 'make all' to compile the code.
+It will create both the unsynchronized and synchronized version of the program
+as 'part01' and 'part01-sync', respectively.
+
+Each expects and will only accept one parameter, the number of threads to be
+run. It also expects and will only accept that parameter if it is a valid
+positive integer.
+
+For example:
+-	run make all
+-	run ./part01 3 which creates 3 threads and runs the unsynchronized version.
+-	run ./part01-sync 5 which creates 5 threads and runs the synchronized version.
